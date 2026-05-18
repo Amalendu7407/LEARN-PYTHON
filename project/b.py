@@ -3,7 +3,11 @@ with open('database.pkl', 'rb') as f:
     acc = pickle.load(f)
 while True:
     print()
-    print('1.deposit', '2.withdraw', '3.check balance', '4.exit', sep='\n')
+    print('1.deposit')
+    print('2.withdraw')
+    print('3.check balance')
+    print('4.delete account')
+    print('5.exit')
     n = int(input('select any option: '))
     if n == 1:
         ac = int(input('account number: '))
@@ -35,6 +39,15 @@ while True:
         else:
             print('Invalid account number!')
     elif n == 4:
+        ac = int(input('account number: '))
+        if ac in acc:
+            del acc[ac]
+            with open('database.pkl', 'wb') as f:
+                pickle.dump(acc, f)
+            print('Account deleted successfully!')
+        else:
+            print('Invalid account number!')
+    elif n == 5:
         break
     else:
         print()
