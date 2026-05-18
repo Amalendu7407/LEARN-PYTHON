@@ -1,10 +1,6 @@
-# Banking System Project Using Basic Functions
-
 accounts = {}
 transactions = {}
 
-
-# Create New Account
 def create_account():
 
     acc_no = int(input("Enter Account Number : "))
@@ -21,8 +17,6 @@ def create_account():
 
         print("\nAccount Created Successfully")
 
-
-# Deposit Money
 def deposit_money():
 
     acc_no = int(input("Enter Account Number : "))
@@ -40,8 +34,6 @@ def deposit_money():
     else:
         print("\nAccount Not Found")
 
-
-# Withdraw Money
 def withdraw_money():
 
     acc_no = int(input("Enter Account Number : "))
@@ -65,8 +57,6 @@ def withdraw_money():
     else:
         print("\nAccount Not Found")
 
-
-# Display Account Details
 def display_account():
 
     acc_no = int(input("Enter Account Number : "))
@@ -80,8 +70,6 @@ def display_account():
     else:
         print("\nAccount Not Found")
 
-
-# Delete Account
 def delete_account():
 
     acc_no = int(input("Enter Account Number : "))
@@ -97,7 +85,6 @@ def delete_account():
         print("\nAccount Not Found")
 
 
-# Show Last 5 Transactions
 def show_transactions():
 
     acc_no = int(input("Enter Account Number : "))
@@ -117,9 +104,7 @@ def show_transactions():
 
     else:
         print("\nAccount Not Found")
-
-
-# Main Program
+        
 while True:
 
     print("\n====== BANKING SYSTEM ======")
